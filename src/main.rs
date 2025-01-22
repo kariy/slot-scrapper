@@ -13,8 +13,8 @@ fn main() {
     let db = open_db(path).unwrap();
 
     let tx = db.tx().unwrap();
-    if let Some(res) = tx.cursor::<tables::TxNumbers>().unwrap().last().unwrap() {
-        let (.., tx_number) = res;
+    if let Some(res) = tx.cursor::<tables::TxHashes>().unwrap().last().unwrap() {
+        let (tx_number, ..) = res;
         total_txs += tx_number;
     }
 
