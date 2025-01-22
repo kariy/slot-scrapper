@@ -1,0 +1,8 @@
+[package]
+name = "slot-scrapper"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+katana-db = { git = "https://github.com/dojoengine/dojo", tag = "v1.0.12" }
+katana-primitives = { git = "https://github.com/dojoengine/dojo", tag = "v1.0.12" }
